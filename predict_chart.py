@@ -15,7 +15,7 @@ import xgboost as xgb
 import catboost as cb
 
 # Load the data
-data = pd.read_csv('filtered_data.csv')
+data = pd.read_csv('DatasetFileName.csv')
 
 # Independent (X) and dependent (y) variables
 X = data.drop('Adsorption', axis=1)
