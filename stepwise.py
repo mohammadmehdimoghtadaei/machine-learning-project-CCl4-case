@@ -2,7 +2,7 @@ import pandas as pd
 import statsmodels.api as sm
 
 # Load data
-data = pd.read_csv('normalized_data.csv')
+data = pd.read_csv('DatasetFileName.csv')
 data = data.drop(columns=["filename"])
 # List of independent variables
 variables = [ 'HOA', 'Average Henry coefficient', 'LCD', 'PLD', 'LCD/PLD', 
@@ -65,7 +65,7 @@ columns_to_keep = ['Adsorption'] + selected_variables  # Keep the dependent vari
 filtered_data = data[columns_to_keep]
 
 # Save the new data to a CSV file
-output_file = 'filtered_data.csv'
+output_file = 'output.csv'
 filtered_data.to_csv(output_file, index=False)
 
 print(f"New file with important variables saved to {output_file}.")
