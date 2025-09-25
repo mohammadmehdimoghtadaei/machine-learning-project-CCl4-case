@@ -19,7 +19,7 @@ normalized_data = pd.DataFrame(scaler.fit_transform(data_to_normalize), columns=
 final_data = pd.concat([normalized_data, data[ignore_columns]], axis=1)
 
 # Save the normalized data to a new CSV file
-output_file = 'normalized_data.csv'  # Your output file name
+output_file = 'output.csv'  # Your output file name
 final_data.to_csv(output_file, index=False)
 
 print(f"Data has been normalized and saved to {output_file}.")
